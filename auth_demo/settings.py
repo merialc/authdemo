@@ -35,6 +35,10 @@ AUTHENTICATION_BACKENDS = (
 
 AUTH_USER_MODEL = 'accounts.User'
 
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, "static"),
+)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -131,3 +135,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_1URLx914YWI0EgBoUgFr3COE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_k5mTHdMFNHuD5NmgTTmsjFuk')

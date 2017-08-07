@@ -7,8 +7,9 @@ from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
 from accounts.forms import UserRegistrationForm, UserLoginForm
 from django.contrib.auth.decorators import login_required
-@login_required(login_url='/login/')
 
+
+@login_required(login_url='/login/')
 def profile(request):
     return render(request, 'profile.html')
 
@@ -58,5 +59,10 @@ def login(request):
     args = {'form': form}
     args.update(csrf(request))
     return render(request, 'login.html', args)
+
+def logout(request):
+    auth.logout(request)
+    messages.success(request, 'You have successfully logged out')
+    return redirect(reverse('index'))
 
 # Create your views here.
