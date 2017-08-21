@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'hello',
     'accounts',
     'django_forms_bootstrap',
+    'stripe',
 
 ]
 

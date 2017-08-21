@@ -1,5 +1,5 @@
 /**
- * Created by clairemitchell on 04/08/2017.
+ * Created by clairemitchell on 07/08/2017.
  */
 $(function() {
   $("#register-form").submit(function() {
