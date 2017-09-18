@@ -26,7 +26,7 @@ SECRET_KEY = '^7lk$)tv1j-r+^^4r5y_b+o!8(61sdx**48g!xnh(9^^&eb%$3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'dd74b8c4.ngrok.io']
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -35,9 +35,10 @@ AUTHENTICATION_BACKENDS = (
 
 AUTH_USER_MODEL = 'accounts.User'
 
-STATICFILES_DIRS = (
-   os.path.join(BASE_DIR, "static"),
-)
+SITE_URL = 'http://127.0.0.1'
+PAYPAL_NOTIFY_URL = 'http://dd74b8c4.ngrok.io/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = '<clairemitchell0509@gmail.com>'
+
 
 # Application definition
 
@@ -49,11 +50,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello',
-    'accounts',
     'django_forms_bootstrap',
     'stripe',
+    'paypal.standard.ipn',
+    'debug_toolbar',
+    'tinymce',
+    'emoticons',
+    'accounts',
+    'paypal_store',
+    'products',
+    'magazines',
+    'threads',
+    'polls',
 
 ]
+
+INTERNAL_IPS = ('127.0.0.1',)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,6 +76,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
 ]
 
 ROOT_URLCONF = 'auth_demo.urls'
@@ -134,7 +149,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, "static"),
+)
+
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+
 STATIC_URL = '/static/'
+STATIC_ROOT = ''
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_1URLx914YWI0EgBoUgFr3COE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_k5mTHdMFNHuD5NmgTTmsjFuk')

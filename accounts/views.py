@@ -48,7 +48,7 @@ def register(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             try:
-                customer = stripe.Charge.create(
+                customer = stripe.Customer.create(
                     email=form.cleaned_data['email'],
                     card=form.cleaned_data['stripe_id'],
                     plan='REG_MONTHLY',

@@ -1,0 +1,56 @@
+[
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$7EJjvSihCVa1$WMQd/+Z98Q+afT0v6HO3BY1iWZx9hAjWc+lSDJ9Ykzw=",
+        "last_login": "2017-09-06T09:25:30.973Z",
+        "is_superuser": true,
+        "username": "clairelouisemitchell1@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "clairelouisemitchell1@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-07-31T10:32:54.864Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$B4raACsnTR5v$tJTLLxGfwvS/jsi7OadBZDQ5zJC9K4a2wwkws1IPMHs=",
+        "last_login": "2017-08-15T08:49:12.532Z",
+        "is_superuser": false,
+        "username": "clairemitchell0509@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "clairemitchell0509@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-07-31T10:48:51.844Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$3jv1JwiHNG3W$Zin2ma1PY3Gtvg3CTVWqhgr0Uf2emjYpkFbBlbsVZjA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "hello@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "hello@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-08-03T08:08:45.990Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
