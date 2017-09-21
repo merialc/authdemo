@@ -1,15 +1,28 @@
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: Enter your own SECRET_KEY here
+
+# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '^7lk$)tv1j-r+^^4r5y_b+o!8(61sdx**48g!xnh(9^^&eb%$3'
 
-ALLOWED_HOSTS = []
-SITE_ID = 2
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'dd74b8c4.ngrok.io']
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth',
+)
+
+AUTH_USER_MODEL = 'accounts.User'
+
+SITE_URL = 'http://127.0.0.1'
+PAYPAL_NOTIFY_URL = 'http://dd74b8c4.ngrok.io/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = '<clairemitchell0509@gmail.com>'
+
 
 # Application definition
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -17,22 +30,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'django.contrib.flatpages',
+    'hello',
     'django_forms_bootstrap',
+    'stripe',
     'paypal.standard.ipn',
-    'rest_framework',
+    'debug_toolbar',
     'tinymce',
     'emoticons',
-    'disqus',
-    'reusable_blog',
-    'home',
     'accounts',
     'paypal_store',
     'products',
     'magazines',
     'threads',
     'polls',
+
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -53,7 +64,7 @@ MIDDLEWARE = [
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
-ROOT_URLCONF = 'we_are_social.urls'
+ROOT_URLCONF = 'auth_demo.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'we_are_social.wsgi.application'
+WSGI_APPLICATION = 'auth_demo.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -94,12 +105,11 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-STATIC_URL = '/static/'
-STATIC_ROOT = ''
-
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+   os.path.join(BASE_DIR, "static"),
 )
 
-TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
-                               "tinymce", "tinymce.min.js")
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+
+STATIC_URL = '/static/'
+STATIC_ROOT = ''
