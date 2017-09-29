@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
 from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
 from accounts import views as accounts_views
 from hello import views as hello_views
 from products import views as product_views
 from magazines import views as magazine_views
-from django.conf import settings
 from threads import views as forum_views
 
 
@@ -51,4 +51,6 @@ urlpatterns = [
 
 if settings.DEBUG:
     import debug_toolbar
-    urlpatterns.append(url(r'^debug/', include(debug_toolbar.urls)))
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+        ]

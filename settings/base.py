@@ -7,14 +7,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^7lk$)tv1j-r+^^4r5y_b+o!8(61sdx**48g!xnh(9^^&eb%$3'
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'dd74b8c4.ngrok.io']
-
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'accounts.backends.EmailAuth',
-)
-
-AUTH_USER_MODEL = 'accounts.User'
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'dd74b8c4.ngrok.io', 'codeinstitutesocial-staging.herokuapp.com']
+SITE_ID = 3
 
 SITE_URL = 'http://127.0.0.1'
 PAYPAL_NOTIFY_URL = 'http://dd74b8c4.ngrok.io/a-very-hard-to-guess-url/'
@@ -34,7 +28,6 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'stripe',
     'paypal.standard.ipn',
-    'debug_toolbar',
     'tinymce',
     'emoticons',
     'accounts',
@@ -47,6 +40,7 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
+
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',
                            'accounts.backends.EmailAuth',)
 LOGIN_URL = '/login/'
@@ -60,11 +54,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'auth_demo.urls'
+
 
 TEMPLATES = [
     {

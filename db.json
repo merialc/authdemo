@@ -1,0 +1,134 @@
+[
+{
+    "fields": {
+        "expire_date": "2017-09-20T09:25:30.978Z",
+        "session_data": "OTA5NTIyYmM3NjQ2MjMxYzE0ZDhhMjI0N2MwMjEyNWYxYzRiYjZiMTp7Il9hdXRoX3VzZXJfaGFzaCI6IjUwODM0M2JhM2U1MGIwMmRiN2ZjZmQzMjZjZDgxZGI2MDMwNjgwZTkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9"
+    },
+    "model": "sessions.session",
+    "pk": "8ptxqabkny1kzmalhmql616ikzl0qrfl"
+},
+{
+    "fields": {
+        "expire_date": "2017-09-11T17:01:49.006Z",
+        "session_data": "OTA5NTIyYmM3NjQ2MjMxYzE0ZDhhMjI0N2MwMjEyNWYxYzRiYjZiMTp7Il9hdXRoX3VzZXJfaGFzaCI6IjUwODM0M2JhM2U1MGIwMmRiN2ZjZmQzMjZjZDgxZGI2MDMwNjgwZTkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9"
+    },
+    "model": "sessions.session",
+    "pk": "gjjc4yhutwiay8rogo3hhc4rv104mdgh"
+},
+{
+    "fields": {
+        "expire_date": "2017-08-29T08:49:12.535Z",
+        "session_data": "ZGM0NzcwNzI4OWU5MzEyN2QwNmE4NzJkYzEyNjhmY2M5YzA0MjYxNjp7Il9hdXRoX3VzZXJfaGFzaCI6IjRiYzJmMmUwYzJhMjc3MTI3NDdjMTJkMmU2NjlhMzY4ZGQ3OWI5ZjMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMiJ9"
+    },
+    "model": "sessions.session",
+    "pk": "vpjuxvxbsa5mnfn666dcyoq1zj9k9ig4"
+},
+{
+    "fields": {
+        "username": "clairelouisemitchell1@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2017-09-06T09:25:30.973Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$36000$7EJjvSihCVa1$WMQd/+Z98Q+afT0v6HO3BY1iWZx9hAjWc+lSDJ9Ykzw=",
+        "email": "clairelouisemitchell1@gmail.com",
+        "date_joined": "2017-07-31T10:32:54.864Z"
+    },
+    "model": "accounts.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "clairemitchell0509@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2017-08-15T08:49:12.532Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$36000$B4raACsnTR5v$tJTLLxGfwvS/jsi7OadBZDQ5zJC9K4a2wwkws1IPMHs=",
+        "email": "clairemitchell0509@gmail.com",
+        "date_joined": "2017-07-31T10:48:51.844Z"
+    },
+    "model": "accounts.user",
+    "pk": 2
+},
+{
+    "fields": {
+        "username": "hello@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": null,
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$36000$3jv1JwiHNG3W$Zin2ma1PY3Gtvg3CTVWqhgr0Uf2emjYpkFbBlbsVZjA=",
+        "email": "hello@gmail.com",
+        "date_joined": "2017-08-03T08:08:45.990Z"
+    },
+    "model": "accounts.user",
+    "pk": 3
+},
+{
+    "fields": {
+        "price": "5.00",
+        "name": "CDs",
+        "description": "mix of old cds"
+    },
+    "model": "products.product",
+    "pk": 1
+},
+{
+    "fields": {
+        "price": "10.00",
+        "name": "Records",
+        "description": "mix of old records"
+    },
+    "model": "products.product",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2017-08-28T14:51:23.222Z",
+        "object_repr": "Product object",
+        "object_id": "1",
+        "change_message": "[{\"added\": {}}]",
+        "user": [
+            "clairelouisemitchell1@gmail.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2017-08-28T14:51:40.156Z",
+        "object_repr": "Product object",
+        "object_id": "2",
+        "change_message": "[{\"added\": {}}]",
+        "user": [
+            "clairelouisemitchell1@gmail.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 2
+}
+]
