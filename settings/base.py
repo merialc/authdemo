@@ -10,8 +10,8 @@ SECRET_KEY = '^7lk$)tv1j-r+^^4r5y_b+o!8(61sdx**48g!xnh(9^^&eb%$3'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'dd74b8c4.ngrok.io', 'codeinstitutesocial-staging.herokuapp.com']
 SITE_ID = 3
 
-SITE_URL = 'http://127.0.0.1'
-PAYPAL_NOTIFY_URL = 'http://dd74b8c4.ngrok.io/a-very-hard-to-guess-url/'
+SITE_URL = 'codeinstitutesocial-staging.herokuapp.com'
+PAYPAL_NOTIFY_URL = 'codeinstitutesocial-staging.herokuapp.com'
 PAYPAL_RECEIVER_EMAIL = '<clairemitchell0509@gmail.com>'
 
 
